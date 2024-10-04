@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="producto-detalle">
+        <h1>Detalles del Producto</h1>
+        <img id="producto-imagen" src="assets/producto1.PNG" alt="Imagen del producto">
+        <h2 id="producto-nombre">Mystery Box</h2>
+        <p id="producto-descripcion">Descripción detallada del producto seleccionado.</p>
+        
+        <!-- Selector de cantidad -->
+        <label for="cantidad">Cantidad:</label>
+        <select id="cantidad" name="cantidad">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <!-- Botón para confirmar compra -->
+        <button id="comprar-btn">Comprar Ahora</button>
+    </div>
+
+    <script>
+        // Obtener el producto seleccionado de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const producto = urlParams.get('producto');
+
+        // Cambiar la información de la página según el producto seleccionado
+        if (producto) {
+            document.getElementById('producto-nombre').textContent = producto;
+            document.getElementById('producto-imagen').src = `assets/${producto}.PNG`;
+            document.getElementById('producto-descripcion').textContent = `Descripción detallada del producto ${producto}.`;
+        }
+    </script>
+</body>
+</html>

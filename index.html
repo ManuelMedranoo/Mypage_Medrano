@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="encabezado"> 
+        <nav>
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#SobreMi">Sobre nosotros</a></li>
+                <li><a href="#Contacto">Ubicaciones</a></li>
+            </ul>
+        </nav>
+
+        <!-- Slider -->
+        <div class="slider">
+            <div class="slides">
+                <img src="assets/slider/slider1.PNG" alt="Portada 1" class="slide">
+                <img src="assets/slider/slider2.PNG" alt="Portada 2" class="slide">
+            </div>
+        </div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <!-- Galería de productos -->
+    <section id="Galeria-Productos">
+        <h2>Nuestros Productos</h2>
+        <div class="galeria">
+            <div class="productos">
+                <img src="assets/producto1.PNG" alt="producto1"/>
+                <h3>Mystery Box</h3>
+                <p>Descripción del producto</p>
+                <a href="producto.html?producto=MysteryBox"><button>Comprar Producto</button></a>
+            </div>
+
+            <div class="productos">
+                <img src="assets/producto2.PNG" alt="producto2"/>
+                <h3>New York Yankees</h3>
+                <p>Descripción del producto</p>
+                <a href="producto.html?producto=Yankees"><button>Comprar Producto</button></a>
+            </div>
+
+            <div class="productos">
+                <img src="assets/producto3.PNG" alt="producto3"/>
+                <h3>New Era</h3>
+                <p>Descripción del producto</p>
+                <a href="producto.html?producto=NewEra"><button>Comprar Producto</button></a>
+            </div>
+
+            <div class="productos">
+                <img src="assets/producto4.PNG" alt="producto4"/>
+                <h3>Los Angeles Dodgers</h3>
+                <p>Descripción del producto</p>
+                <a href="producto.html?producto=Dodgers"><button>Comprar Producto</button></a>
+            </div>
+
+            <div class="productos">
+                <img src="assets/producto5.PNG" alt="producto5"/>
+                <h3>Chicago Cubs</h3>
+                <p>Descripción del producto</p>
+                <a href="producto.html?producto=Cubs"><button>Comprar Producto</button></a>
+            </div>
+        </div>        
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="Contacto">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>
